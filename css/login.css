@@ -1,0 +1,249 @@
+
+body {
+    font-family: "Montserrat";
+    text-align: center;
+  }
+  /* Navigation Bar */
+  .navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .nav-item {
+    padding: 0 18px;
+  }
+  .nav-link {
+    font-size: 1.1rem;
+    font-family: "Montserrat";
+    font-weight: 400;
+  }
+.cont{
+    text-align: center;
+    padding: 70px 400px;
+}
+nav.auth {
+    display: flex;
+    border-bottom: 1px solid #212529;
+  }
+nav.auth > div {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .cont main {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .cont main > div {
+    position: relative;
+  }
+  
+  .cont main > div > div {
+    margin-top: 10px;
+  }
+  input[type="email"], input[type="password"] {
+    padding: 10px;
+    display: block;
+    font-size: 14px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    transition: all 0.3s;
+    color: #333;
+  }
+  
+  input[type="email"]:valid,input[type="password"]:valid{
+    border-color: green;
+  }
+  
+  input[type="email"].error ,input[type="password"].error{
+    border-color: red;
+  }
+  
+  input:focus {
+    border-color: #A2BCE0;
+  }
+  .cont button {
+    border-radius: 3px;
+    margin-top: 10px;
+    font-size: 16px;
+    background: #212529;
+    padding: 14px;
+    width: 100%;
+    border-radius: 3px;
+    border: 0;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .cont button:hover {
+    opacity: 0.9;
+  }
+  #login, #signup {
+    display: none;
+  
+  }
+  #login.show, #signup.show {
+    display: block;
+  }
+  .input-select {
+    display: flex;
+    align-items: center;
+  }
+  .input-select input {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    outline: none;
+  }
+  .input-select label {
+    margin-left: 5px;
+  }
+  .input-select input:before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border: 2px solid #aaa;
+    border-radius: 3px;
+    display: block;
+  }
+  .input-select input:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+  } 
+  .input-select input:checked:after {
+    background: red;
+  }
+/* @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+body {background: #A2BCE0;}
+.container {
+  font-family: 'Lato', sans-serif;
+  width: 500px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+nav.auth {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+nav.auth > div {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+nav.auth > div.selected {
+  border-bottom: 2px solid #A2BCE0;
+}
+.cont main {
+  padding: 10px;
+  box-sizing: border-box;
+}
+.cont main > div {
+  position: relative;
+}
+
+.cont main > div > div {
+  margin-top: 10px;
+}
+input[type="email"], input[type="password"] {
+  padding: 10px;
+  display: block;
+  font-size: 14px;
+  margin: 5px 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  transition: all 0.3s;
+  color: #333;
+}
+
+input[type="email"]:valid,input[type="password"]:valid{
+  border-color: green;
+}
+
+input[type="email"].error ,input[type="password"].error{
+  border-color: red;
+}
+
+input:focus {
+  border-color: #A2BCE0;
+}
+.cont button {
+  border-radius: 3px;
+  margin-top: 10px;
+  font-size: 16px;
+  background: #A2BCE0;
+  padding: 14px;
+  width: 100%;
+  border-radius: 3px;
+  border: 0;
+  color: #000;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.cont button:hover {
+  opacity: 0.9;
+}
+#login, #signup {
+  display: none;
+
+}
+#login.show, #signup.show {
+  display: block;
+}
+.input-select {
+  display: flex;
+  align-items: center;
+}
+.input-select input {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  outline: none;
+}
+.input-select label {
+  margin-left: 5px;
+}
+.input-select input:before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  backgrouund: #fff;
+  border: 2px solid #aaa;
+  border-radius: 3px;
+  display: block;
+}
+.input-select input:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+} 
+.input-select input:checked:after {
+  background: #A2BCE0;
+} */

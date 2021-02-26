@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Arrow Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="men.html">Men</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="women.html">Women</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html"><i class="fas fa-shopping-bag"></i>  Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login/Signup</a>
+          </li>
+          <li class="nav-item">
+            <input type="text" class="form-control mr-sm-2" type="search" placeholder="Search" id="searchField">
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-light my-sm-0" onclick="m()" id="searchBtn"><a style="text-decoration: none;" id="searchBar">Search</a></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+function m(){
+  const searchField = document.getElementById('searchField')
+  const searchBar = document.getElementById('searchBar')
+  const searchBtn = document.getElementById('searchBtn')
+  searchBtn.addEventListener('click',function(){
+    if (searchField.value != ""){
+    localStorage.setItem('searchedProduct',searchField.value)
+    searchBar.setAttribute('href','searched-products.html')
+    }
+  })
+}
+</script>
