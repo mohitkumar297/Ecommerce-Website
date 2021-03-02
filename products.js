@@ -2,10 +2,15 @@ import data from "./data.js";
 import categories from "./categories.js"
 
 var allProducts = data
+var allCategories = categories
 
 var allData = JSON.parse(localStorage.getItem('allData'))
 if (allData != null){
     allProducts = allData
+}
+var allCat = JSON.parse(localStorage.getItem('allCategories'))
+if (allCat != null){
+    allCategories = allCat   
 }
 console.log(allProducts);
 
@@ -74,8 +79,6 @@ btnDrop.append(ul)
 divDrop.append(btnDrop)
 divColRight.append(divDrop)
 
-
-
 body.append(divContainerFluid)
 divContainerFluid.append(divRow)
 
@@ -101,7 +104,7 @@ const buildCategories = category => {
     a.innerHTML = category.name
 }
 
-categories.forEach(category => buildCategories(category));
+allCategories.forEach(category => buildCategories(category));
 var numberOfProductLinks = document.querySelectorAll(".goToProduct");
 console.log(numberOfProductLinks.length);
 

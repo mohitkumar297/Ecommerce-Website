@@ -1,5 +1,7 @@
 import data from './data.js';
 
+const checkoutBtn = document.getElementById('checkoutBtn')
+
 const listSection = document.getElementById('listSection') 
 
 const orderValue = document.getElementById('orderValue') 
@@ -65,10 +67,14 @@ function getProductsInCart(){
         buildCart(product)
         price += product.price
     })
-    orderValue.innerHTML = "Order Value : $"+price
+    orderValue.innerHTML = "Order Value : $"+price.toFixed(2)
         deliveryPrice.innerHTML = "Delivery Price : $9.99"
         totalAmount.innerHTML = "Total Amount : $" + (price+9.99).toFixed(2)
 }
+
+checkoutBtn.addEventListener('click', function(){
+    // product.user = localStorage.getItem('currentUser')
+})
 
 
 // Footer

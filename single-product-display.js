@@ -20,12 +20,12 @@ addToCart.addEventListener('click',function(){
     var getProducts = JSON.parse(localStorage.getItem('addedToCart'))
     if (getProducts != null){
         getProducts.forEach(product =>{
+            // product.user = localStorage.getItem('currentUser')
+            console.log(product);
             existingProducts.push(product)
-        })
-        
+        })   
     }
     console.log(existingProducts);
-    
     existingProducts.push(convertedProduct)
     localStorage.setItem('addedToCart',JSON.stringify(existingProducts))
     // console.log(selectedItems);

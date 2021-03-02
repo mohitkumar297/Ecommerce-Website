@@ -12,6 +12,8 @@ function buildProduct(product){
     row.append(divCol)
     const linkDiv = document.createElement('a')
     divCol.append(linkDiv) 
+    linkDiv.style.textDecoration = 'none'
+    linkDiv.style.color = 'black'
 
     const img = document.createElement('img')
     img.className = 'img'

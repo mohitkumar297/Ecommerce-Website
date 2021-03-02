@@ -48,14 +48,16 @@ loginBtn.addEventListener('click', function() {
 });
 
     Lbtn.addEventListener('click', function() {
-        savedUsers.forEach(element => {
+        var flag = false
+        savedUsers.filter(element => {
             if (Lemail.value === element.email && Lpassword.value === element.password){
-                window.location.replace("http://127.0.0.1:5500/index.html")
-            }
-            else{
-                alert('Invalid User')
-            }
+                flag = true
+                localStorage.setItem('currentUser',element.email)
+            }            
         });
+        if (flag){
+            window.location.replace("http://127.0.0.1:5500/index.html")
+        }
 
 
     //     var em = localStorage.getItem('email')
@@ -72,7 +74,8 @@ loginBtn.addEventListener('click', function() {
 
 Sbtn.addEventListener('click', function() {
     let newUser = {email:Semail.value,
-    password:Spassword.value}
+    password:Spassword.value,
+    userId:savedUsers.length+1}
         savedUsers.push(newUser)
         console.log(savedUsers);
    localStorage.setItem('savedUsers',JSON.stringify(savedUsers))
